@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UK Soft & Solution - 五金行业</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- 返回按钮 -->
+  <button onclick="window.history.back()" 
+          class="fixed top-4 left-4 z-50 bg-white p-2 rounded-full shadow hover:bg-gray-200">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-blue-600">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+    </svg>
+  </button>
+
+  <!-- 顶部背景图 -->
+  <section class="relative w-full h-64">
+    <img src="https://www.istockphoto.com/photo/many-tools-gm492201907-40128188?utm_source=pixabay&utm_medium=affiliate&utm_campaign=sponsored_image&utm_content=srp_topbanner-popular_media&utm_term=tools" 
+         alt="五金行业" 
+         class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+      <h2 class="text-3xl font-bold text-white">五金行业 (Hardware Industry)</h2>
+    </div>
+  </section>
+
+  <!-- 行业介绍 -->
+  <section class="max-w-7xl mx-auto px-4 py-8">
+    <p class="text-lg text-gray-600">
+      在五金行业，商品种类繁多，库存管理和销售开单方式非常关键。我们会根据您的日常开单和销售习惯，帮您推荐最适合的 AutoCount 系统。
+    </p>
+  </section>
+
+  <!-- 交互式提问 -->
+  <section class="max-w-7xl mx-auto px-4 py-8 bg-white rounded-xl shadow">
+    <h3 class="text-2xl font-semibold mb-4">帮您选择最合适的系统</h3>
+    <p class="mb-2">平常您开单的方式是？</p>
+    <div class="space-y-3">
+      <button onclick="showResult('POS System')" 
+              class="w-full p-3 bg-blue-50 hover:bg-blue-100 rounded-lg text-left">
+        我用收银机快速开单
+      </button>
+      <button onclick="showResult('Accounting')" 
+              class="w-full p-3 bg-blue-50 hover:bg-blue-100 rounded-lg text-left">
+        我会做报价单、发票之类的文件
+      </button>
+      <button onclick="showResult('Cloud Accounting')" 
+              class="w-full p-3 bg-blue-50 hover:bg-blue-100 rounded-lg text-left">
+        我希望可以随时随地做账
+      </button>
+      <button onclick="showResult('PalmPOS')" 
+              class="w-full p-3 bg-blue-50 hover:bg-blue-100 rounded-lg text-left">
+        我主要用手机或平板开单
+      </button>
+    </div>
+  </section>
+
+  <!-- 推荐结果 -->
+  <section id="result" class="max-w-7xl mx-auto px-4 py-8 hidden">
+    <h3 class="text-2xl font-semibold mb-4">推荐结果</h3>
+    <a id="recommendedProduct" href="#" 
+       class="block bg-blue-100 hover:bg-blue-200 p-6 rounded-xl shadow-lg text-center transition">
+      <h4 class="text-xl font-bold text-blue-700">POS System</h4>
+      <p class="text-gray-600 mt-2">最适合您的业务需求</p>
+    </a>
+  </section>
+
+  <!-- 广告区：横向滑动 -->
+  <section class="max-w-7xl mx-auto px-4 py-12">
+    <h3 class="text-2xl font-semibold mb-6">其他产品推荐</h3>
+    <div class="flex space-x-6 overflow-x-auto pb-4">
+      <a href="pos-system.html" class="min-w-[250px] bg-white rounded-2xl shadow relative overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437b5?auto=format&fit=crop&w=600&q=80" 
+             alt="POS System" class="absolute inset-0 w-full h-full object-cover opacity-30">
+        <div class="relative p-6">
+          <h4 class="text-lg font-bold">POS System</h4>
+          <p class="text-sm text-gray-600">快速收银与库存管理</p>
+        </div>
+      </a>
+      <a href="accounting.html" class="min-w-[250px] bg-white rounded-2xl shadow relative overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80" 
+             alt="Accounting" class="absolute inset-0 w-full h-full object-cover opacity-30">
+        <div class="relative p-6">
+          <h4 class="text-lg font-bold">Accounting</h4>
+          <p class="text-sm text-gray-600">专业财务会计管理</p>
+        </div>
+      </a>
+      <a href="cloud-accounting.html" class="min-w-[250px] bg-white rounded-2xl shadow relative overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=600&q=80" 
+             alt="Cloud Accounting" class="absolute inset-0 w-full h-full object-cover opacity-30">
+        <div class="relative p-6">
+          <h4 class="text-lg font-bold">Cloud Accounting</h4>
+          <p class="text-sm text-gray-600">随时随地，云端做账</p>
+        </div>
+      </a>
+      <a href="palnpos.html" class="min-w-[250px] bg-white rounded-2xl shadow relative overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1556745757-8d76bdb6984b?auto=format&fit=crop&w=600&q=80" 
+             alt="PalmPOS" class="absolute inset-0 w-full h-full object-cover opacity-30">
+        <div class="relative p-6">
+          <h4 class="text-lg font-bold">PalmPOS</h4>
+          <p class="text-sm text-gray-600">手机开单，灵活方便</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="bg-gray-900 text-white py-8 mt-12">
+    <div class="max-w-7xl mx-auto px-4">
+      <p class="mb-4">
+        Designed for companies. We are a team of passionate people whose goal is to improve everyone's life through disruptive products. 
+        We build great products to solve your business problems. Our products are designed for small to medium size companies willing to optimize their performance.
+      </p>
+      <p class="mb-2 font-semibold">Create more value for Your Business.</p>
+      <p>UK SOFT & SOLUTION PLT</p>
+      <p>99 JALAN KOTA, TAMAN KOTA, 83700 YONG PENG, JOHOR. MALAYSIA</p>
+      <p>+60127479966 | uksoftware2u@gmail.com</p>
+    </div>
+  </footer>
+
+  <script>
+    function showResult(product) {
+      const linkMap = {
+        "POS System": "pos-system.html",
+        "Accounting": "accounting.html",
+        "Cloud Accounting": "cloud-accounting.html",
+        "PalmPOS": "palnpos.html"
+      };
+      const result = document.getElementById("result");
+      const rec = document.getElementById("recommendedProduct");
+      rec.querySelector("h4").textContent = product;
+      rec.href = linkMap[product];
+      result.classList.remove("hidden");
+    }
+  </script>
+
+</body>
+</html>
